@@ -1,0 +1,69 @@
+.ticket-list {
+    display : flex ;
+    flex-direction: column ;
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.ticket-list-container {
+    margin-top : 20px ;
+}
+  
+.ticket-list-header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+  
+.table-container {
+    display: table;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 16px / 16px ;
+    overflow: hidden;
+    margin-top : 40px ;
+}
+  
+.table-row {
+    display: table-row;
+    background-color: #ffffff;
+}
+  
+.header .table-cell {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px 55px;
+    border-bottom: 1px solid #ddd;
+}
+  
+.table-row:not(.header):hover {
+    background-color: #f9f9f9; /* Optional hover effect */
+    cursor: pointer;
+}
+  
+.table-cell {
+    display: table-cell;
+    padding: 20px 55px;
+    text-align: center ;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #444;
+    border-bottom: 1px solid #e0e0e0;
+}
+  
+.table-cell:last-child {
+    text-align: center ;
+}
+  
+.table-row:last-child .table-cell {
+    border-bottom: none;
+}
+  
+.table-container {
+    border: none;
+} 

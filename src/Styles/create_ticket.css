@@ -1,0 +1,17 @@
+.content{
+    display : flex ;
+    height : 100vh ;
+}
+
+.content-side-navbar{
+    display: flex ;
+    position: relative ;
+    justify-content: flex-start ;
+}
+
+.content-main{
+    background-color: #f3f5f7 ;
+    display : flex ;
+    justify-content: center ;
+    width : 100% ;
+}

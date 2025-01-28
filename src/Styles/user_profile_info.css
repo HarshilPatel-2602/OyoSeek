@@ -1,0 +1,24 @@
+.user-profile-info-username{
+    display : flex ;
+    align-items: center;
+    justify-content: flex-end ;
+    font-weight: 300 ;
+    margin-right : 20px ;
+    width : fit-content ;
+    max-width: 300px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    direction: rtl; /* Ensure right-to-left text direction */
+    text-align: right; /* Align text to the right */
+}
+
+.user-profile-info-icon{
+    background-color: #f8f8f8 ;
+    border : 1px solid #f8f8f8 ;
+    border-radius : 50% ;
+    width : 50px ;
+    height : 50px ;
+    margin-right: 40px ;
+    cursor: pointer;
+}
