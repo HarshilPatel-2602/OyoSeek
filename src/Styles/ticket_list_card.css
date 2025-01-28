@@ -1,0 +1,27 @@
+.table-row {
+    display: table-row;
+    background-color: #ffffff;
+}
+
+.table-row:not(.header):hover {
+    background-color: #f9f9f9; /* Optional hover effect */
+    cursor: pointer;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 20px 55px;
+    text-align: center ;
+    vertical-align: middle;
+    font-size: 16px;
+    color: #444;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table-cell:last-child {
+    text-align: center ;
+}
+  
+.table-row:last-child .table-cell {
+    border-bottom: none;
+}

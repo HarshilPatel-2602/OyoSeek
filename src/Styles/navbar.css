@@ -1,0 +1,94 @@
+.navbar-container{
+    display : flex ;
+    position : relative ;
+    height : 80px ;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.1); /* Bottom shadow */
+    z-index: 3;
+}
+
+.left-navbar-container{
+    display: flex ;
+    align-items: center;
+    background-color: white ;
+    width : 40% ;
+}
+
+.navbar-icon{
+ 
+    border: none;
+    background-color: white;
+    margin-left : 20px ;
+    height : 50px ;
+    width  : 50px ;
+    border-radius: 50% ;
+    cursor: pointer ;
+}
+
+.navbar-icon:hover{
+    background-color: #f3f5f7;
+}
+
+.navbar-icon:hover svg rect {
+    fill: #f3f5f7 ; 
+}
+
+.logo-container{
+    transform: scale(0.9) ;
+    margin-top : -1px ;
+    background-color: white ;
+    margin-left : -6px ;
+    cursor : pointer ;
+}
+
+.navbar-search{
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    border-radius: 20px ;
+    background-color: #f3f5f7;
+    padding-left: 10px ;
+}
+
+.navbar-search-btn{
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+    border : none ;
+    background-color : transparent ;
+    height : 50px ;
+
+}
+
+.navbar-search-input{
+    height : 30px ;
+    width : 220px ;
+    border : none ;
+    outline: none ;
+    padding : 10px ;
+    font-size: 20px ;
+    font-weight: 500 ;
+    background-color: transparent ;
+}
+
+.right-navbar-container{
+    background-color: white ;
+    /* border : 1px solid black ; */
+    width : 60% ;
+    display : flex ;
+    justify-content: flex-end ;
+    align-items: center ;
+}
+
+.navbar-add-ticket-btn{
+    margin-right : 30px ;
+}
+
+.navbar-user-profile-info{
+    display: flex ;
+    align-items: center ;
+    border-left : 2px solid #f2f2f2 ;
+    padding : 10px  ;
+    padding-left : 20px ;
+    height : 30px ;
+    cursor: pointer ;
+}

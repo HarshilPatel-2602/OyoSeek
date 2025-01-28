@@ -1,0 +1,21 @@
+.logo-container{
+    display : flex ;
+    background-color: #f8f8f8 ;
+}
+
+.app-logo-name-OYO{
+    margin-right : 10px ;
+    font-weight : bolder ;
+    color : #f32426 ;
+}
+
+.app-logo-name-partition{
+    margin-right: 10px ;
+    font-weight: 100 ;
+    font-size : 35px ;
+    margin-top: 18px ;
+}
+
+.app-logo-name-SEEK{
+    font-weight: 100 ;
+}
