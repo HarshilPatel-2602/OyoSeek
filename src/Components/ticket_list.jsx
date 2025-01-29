@@ -66,7 +66,7 @@ class Ticket_List extends React.Component {
         }
     };
     render () {
-        const {currentLoc} = this.props ;
+        const {currentLoc , role} = this.props ;
         const {tickets} = this.state ;
         //console.log("Lenght : " + tickets.length) ;
         //console.log("Ticket List : " + tickets) ;
@@ -81,7 +81,7 @@ class Ticket_List extends React.Component {
                             <div className="table-cell">SUBJECT</div>
                             <div className="table-cell">STATUS</div>
                             <div className="table-cell">GROUP</div>
-                            <div className="table-cell">ASSIGNED TO</div>
+                            <div className="table-cell">{role === 'CUSTOMER'?'ASSIGNED TO':'CREATED BY'}</div>
                             <div className="table-cell">ADDED</div>
                         </div>
                             {console.log(tickets.length)} ;

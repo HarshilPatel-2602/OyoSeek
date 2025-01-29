@@ -1,7 +1,8 @@
 import React from 'react'
 import axios from 'axios'
+import { connect } from 'react-redux'
 
-import { BASE_URL } from '../config'
+import withNavigate from '../Hoc/withNavigate'
 
 import "../Styles/navbar.css" 
 
@@ -13,24 +14,25 @@ class Navbar extends React.Component {
     constructor(props){
         super(props) ;
         this.state = {
-            searchTicketId : '',
+            searchTicketId : '' ,
         }
     }
     handleInputChange = (event) => {
-        this.setState({ [event.target.name]: event.target.value });
+        console.log(event.target.value) ;
+        this.setState(
+            { [event.target.name]: event.target.value }
+        );
     };
 
     handleSearchSubmit = async (event) => {
         event.preventDefault();
+        console.log(this.state.searchTicketId) ;
         if (this.state.searchTicketId === '') {
             return ;
         }
         const { searchTicketId } = this.state ;
-        try {
-            
-        } catch (error) {
-            console.error("Login error:", error);
-        }
+        const { navigate } = this.props ;
+        navigate(`/ticket/search/${searchTicketId}`) ;
     };
     render () {
         const { searchTicketId } = this.state ;
@@ -64,7 +66,7 @@ class Navbar extends React.Component {
                         </form>
                     </div>
                     <div className="right-navbar-container">
-                        {this.props.add_ticket && <div className="navbar-add-ticket-btn">
+                        {this.props.add_ticket && this.props.role !== 'AGENT' && <div className="navbar-add-ticket-btn">
                             <Add_Ticket_Btn/>
                         </div>}
                         <div className="navbar-user-profile-info">
@@ -77,4 +79,9 @@ class Navbar extends React.Component {
     }
 }
 
-export default Navbar ;
+const mapStateToProps = (state) => ({
+    userId : state.user.userId,
+    role : state.user.role,
+  });
+
+export default connect(mapStateToProps)(withNavigate(Navbar)) ;

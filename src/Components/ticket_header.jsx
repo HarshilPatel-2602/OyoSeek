@@ -92,27 +92,27 @@ class Ticket_Header extends React.Component {
     }
 
     render() {
-        const { status } = this.props;
+        const { status , role } = this.props;
         const { showDescriptionField, description } = this.state;
         return (
             <>
                 <div className="ticket-header-buttons">
-                    <button className="ticket-header-buttons-reply" onClick={this.handleReplyClick} disabled={status !== 'ACTIVE'}>
+                    {status === 'ACTIVE' && (<button className="ticket-header-buttons-reply" onClick={this.handleReplyClick}>
                         <div className="ticket-header-buttons-reply-logo">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#00796B">
                                 <path d="M760-200v-160q0-50-35-85t-85-35H273l144 144-57 56-240-240 240-240 57 56-144 144h367q83 0 141.5 58.5T840-360v160h-80Z" />
                             </svg>
                         </div>
                         <h2 className="ticket-header-buttons-reply-text">Reply</h2>
-                    </button>
-                    <button className="ticket-header-buttons-markResolved" onClick={this.handleMarkResolvedClick}>
+                    </button>)}
+                    {status === 'ACTIVE' && role === 'AGENT' && (<button className="ticket-header-buttons-markResolved" onClick={this.handleMarkResolvedClick}>
                         <div className="ticket-header-buttons-markResolved-logo">
                             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#00796B">
                                 <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
                             </svg>
                         </div>
                         <h2 className="ticket-header-buttons-markResolve-text">Mark as Resolved</h2>
-                    </button>
+                    </button>)}
                 </div>
                 {showDescriptionField && (
                     <div className="reply-input-container">
